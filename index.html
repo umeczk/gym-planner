@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ToFitko Body Health Planner</title>
+  <title>Kuba & Terka — Let's Go to the Gym!</title>
   <style>
     :root {
       --primary: #e8501a;
@@ -436,9 +436,9 @@
 <body>
 
 <div class="hero">
-  <div class="hero-logo">ToFitko · Pod Palmovkou · Prague</div>
+  <div class="hero-logo" id="hero-tagline">💪 Kuba &amp; Terka · Let's Go to the Gym!</div>
   <h1>Personal Body Health Planner</h1>
-  <p>Powered by InBody 370s assessment · Technogym · Built for real results</p>
+  <p id="hero-quote" style="font-style:italic;font-size:16px;color:#f0f0f0;max-width:600px;margin:10px auto 0;"></p>
 </div>
 
 <div class="container">
@@ -1475,6 +1475,35 @@ function generatePlanHTML() {
 }
 
 function capitalize(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+
+// ─── Funny inspiration quotes ─────────────────────────────────────────────────
+const QUOTES = [
+  "Kuba, the only bad workout is the one Terka did without you. 🏋️",
+  "Terka said she'd spot you. That means you HAVE to go. 💁‍♀️",
+  "Your future self is already at the gym. Don't stand them up. 🕐",
+  "Kuba, svíčková will still be there AFTER leg day. Promise. 🥩",
+  "The gym called. It misses you both. It's getting clingy. 📞",
+  "Pain is temporary. Skipping with Terka is forever. 😂",
+  "Kuba: 'I'll start Monday.' Terka: 'It IS Monday.' 📅",
+  "Every rep is one step closer to fitting into those old jeans. 👖",
+  "Terka does burpees. You do burpees. This is friendship. 🤝",
+  "Czech beer has calories. Czech squats burn calories. Choose wisely. 🍺",
+  "The hardest lift is getting off the couch. You've already done that. 🛋️",
+  "Kuba, Terka is already warming up. RUN. 🏃",
+  "Your body is 60% water. Time to shake it. 💧",
+  "No excuses. Terka heard them all and she's still here. 🙄",
+  "Muscles are just fat that got its life together. 💪",
+  "Sweat is just your fat crying. Make it weep. 😭",
+  "If Kuba can do it, literally anyone can. Sorry Kuba. 😬",
+  "Pro tip: the gym is easier than explaining to Terka why you skipped. 😅",
+  "Today's workout sponsored by: guilt and Czech pastries. 🥐",
+  "One day or day one. Terka picks day one. Every time. 🔥",
+];
+
+(function() {
+  const q = QUOTES[Math.floor(Math.random() * QUOTES.length)];
+  document.getElementById('hero-quote').textContent = q;
+})();
 </script>
 </body>
 </html>
