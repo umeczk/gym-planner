@@ -581,11 +581,11 @@
   <div class="section" id="step-2">
     <div class="card">
       <div class="card-title">InBody 370s Measurement</div>
-      <div class="card-sub">Enter your values from the ToFitko InBody scan, or use estimates. These give your trainer a precise baseline — far more accurate than weight alone.</div>
+      <div class="card-sub">Enter your values from the InBody scan, or use estimates. These give your trainer a precise baseline — far more accurate than weight alone.</div>
 
       <div class="alert alert-info">
         <span>ℹ️</span>
-        <div>If you haven't had an InBody scan yet, enter your best estimates or use the defaults. Your trainer at ToFitko can scan you in under 3 minutes before your first session.</div>
+        <div>If you haven't had an InBody scan yet, enter your best estimates or use the defaults. Your trainer can scan you in under 3 minutes before your first session.</div>
       </div>
 
       <div class="form-grid">
@@ -1198,7 +1198,7 @@ function getAssessmentTests() {
     { test: 'Tape measure (waist, hips)', baseline: 'Measure after waking, before food', frequency: 'Every 2 weeks' },
     { test: '1-km treadmill time trial', baseline: 'How fast can you walk/run 1 km?', frequency: 'Monthly' },
     { test: 'Plank hold time', baseline: 'Max hold with good form', frequency: 'Every 2 weeks' },
-    { test: 'InBody 370s scan (ToFitko)', baseline: 'Full body composition', frequency: 'Every 4 weeks' },
+    { test: 'InBody 370s scan (gym)', baseline: 'Full body composition', frequency: 'Every 4 weeks' },
   ];
 }
 
@@ -1268,7 +1268,7 @@ function generatePlanHTML() {
           <div style="font-size:12px;color:var(--primary);font-weight:700;letter-spacing:2px;text-transform:uppercase;">Personal Training Plan</div>
           <div style="font-size:26px;font-weight:800;margin:4px 0;">${state.name}</div>
           <div style="font-size:14px;color:var(--muted);">${state.age} yrs · ${state.gender} · ${state.heightRaw} · ${state.weight} kg</div>
-          <div style="font-size:13px;color:var(--muted);margin-top:4px;">ToFitko Pod Palmovkou · ${new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:4px;">Kuba &amp; Terka Gym Planner · ${new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}</div>
         </div>
         <div style="text-align:right;">
           <div style="font-size:12px;color:var(--muted);">TARGET</div>
@@ -1448,10 +1448,10 @@ function generatePlanHTML() {
       </table>
     </div>
 
-    <!-- ToFitko Equipment Guide -->
+    <!-- Gym Equipment Guide -->
     <div class="card">
-      <div class="card-title">ToFitko Equipment at Your Disposal</div>
-      <div class="card-sub">Everything available at Pod Palmovkou — use all of it.</div>
+      <div class="card-title">Gym Equipment at Your Disposal</div>
+      <div class="card-sub">Everything available at your gym — use all of it.</div>
       <div class="inbody-grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));">
         ${[
           ['🏃', 'Spoteee Skillmill', 'Self-powered curved treadmill — best calorie burner in the gym'],
